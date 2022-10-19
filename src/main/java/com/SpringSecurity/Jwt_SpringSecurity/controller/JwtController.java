@@ -72,6 +72,12 @@ public class JwtController {
 			
 			return userService.getUserByName(username);
 		}
+		
+		@PostMapping("/signup")
+		public String saveUser(@RequestBody UserEntity userEntity) {
+				
+			return userService.saveUser(userEntity);
+		}
 }
 
 
