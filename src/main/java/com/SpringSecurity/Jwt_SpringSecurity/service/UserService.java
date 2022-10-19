@@ -55,4 +55,9 @@ public class UserService implements UserDetailsService{
 		return userRepository.findByusername(username);
 	}
 	
+	public String saveUser(UserEntity userEntity) {
+		userRepository.save(userEntity);
+		return userEntity.getUsername() +" data has been saved in h2-database";
+	}
+	
 }
